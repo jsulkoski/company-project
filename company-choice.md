@@ -1,0 +1,1 @@
+I chose Nexova as my company because I was immediately drawn to working with data.  I also really liked that AI was at the core of their business.  Lastly is the fact that their challenges are interesting to me.  I look forward to applying AI Engineering directly for this company.   
