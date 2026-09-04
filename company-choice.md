@@ -1,1 +1,2 @@
-I chose Nexova as my company because I was immediately drawn to working with data.  I also really liked that AI was at the core of their business.  Lastly is the fact that their challenges are interesting to me.  I look forward to applying AI Engineering directly for this company.   
+I chose Nexova as my company because I was immediately drawn to working with data.  I also really liked that AI was at the core of their business.  Lastly is the fact that their challenges are interesting to me.  I look forward to applying AI Engineering directly for this company.  
+The Talent Selection Operations department is of interest to me because of its need for AI implementation. I am also interested in assisting with the needs of the Technology and Infrastructure department.
