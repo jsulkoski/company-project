@@ -1,0 +1,14 @@
+{
+  "name": "nexova-website",
+  "version": "1.0.0",
+  "description": "Nexova Solutions – Corporate website with landing page and talent application form",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . --listen 8080 --cors",
+    "start": "npx serve . --listen 8080 --cors"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0",
+    "serve": "^14.2.0"
+  }
+}

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexova Solutions – Talent Acquisition &amp; HR Consulting</title>
+  <meta name="description" content="Nexova Solutions: HR consulting and talent acquisition firm specialising in executive headhunting, customer support outsourcing, and corporate training. Based in Valencia with offices in Miami.">
+  <link rel="canonical" href="https://nexova.com/">
+
+  <!-- Tailwind CSS via CDN (Play) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Nexova Solutions",
+    "description": "Human resources consulting and talent acquisition firm specialising in executive headhunting, customer support outsourcing, and corporate training in soft skills and leadership.",
+    "url": "https://nexova.com",
+    "telephone": "+34-960-123-456",
+    "email": "contact@nexova.com",
+    "foundingDate": "2011",
+    "numberOfEmployees": 120,
+    "foundingLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Valencia",
+        "addressCountry": "ES"
+      }
+    },
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "name": "Headquarters",
+        "streetAddress": "Calle de la Innovación 42",
+        "addressLocality": "Valencia",
+        "postalCode": "46001",
+        "addressCountry": "ES"
+      },
+      {
+        "@type": "PostalAddress",
+        "name": "Miami Office",
+        "streetAddress": "1200 Brickell Avenue, Suite 300",
+        "addressLocality": "Miami",
+        "addressRegion": "FL",
+        "postalCode": "33131",
+        "addressCountry": "US"
+      }
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Laura Mendoza",
+      "jobTitle": "CEO"
+    },
+    "annualRevenue": {
+      "@type": "MonetaryAmount",
+      "value": "8000000",
+      "currency": "USD"
+    },
+    "areaServed": ["Spain", "United States", "European Union"],
+    "serviceArea": [
+      {
+        "@type": "Service",
+        "name": "Executive & Mid-Management Headhunting",
+        "description": "Recruitment process outsourcing from brief through CV screening, interviews, and final placement."
+      },
+      {
+        "@type": "Service",
+        "name": "Customer Support Team Outsourcing",
+        "description": "Dedicated customer support teams for technology, retail, and finance companies."
+      },
+      {
+        "@type": "Service",
+        "name": "Corporate Training",
+        "description": "Training programmes in soft skills, leadership, communication, and team management."
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/company/nexova-solutions",
+      "https://twitter.com/nexovasolutions"
+    ]
+  }
+  </script>
+
+  <style>
+    /* Minimal custom CSS only for things Tailwind cannot handle */
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    .hero-text-shadow { text-shadow: 0 1px 6px rgba(0,0,0,0.4), 0 2px 12px rgba(0,0,0,0.2); }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900 antialiased leading-relaxed">
+
+  <!-- ====== HEADER ====== -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50" role="banner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3 sm:py-4">
+
+        <!-- Logo / Company Name -->
+        <a href="index.html" class="flex items-center gap-2" aria-label="Nexova Solutions – Home">
+          <!-- Nexova logo mark (abstract N) -->
+          <svg class="w-8 h-8 text-indigo-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M6 6 L18 6 L18 18 L6 18" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="6" cy="6" r="2" fill="currentColor"/>
+            <circle cx="18" cy="6" r="2" fill="currentColor"/>
+            <circle cx="6" cy="18" r="2" fill="currentColor"/>
+            <circle cx="18" cy="18" r="2" fill="currentColor"/>
+          </svg>
+          <span class="text-xl font-bold tracking-tight text-indigo-700">Nexova</span>
+          <span class="text-xs text-gray-400 hidden sm:inline">Solutions</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium" aria-label="Main navigation">
+          <a href="index.html" class="text-indigo-700 border-b-2 border-indigo-700" aria-current="page">Home</a>
+          <a href="#services" class="text-gray-600 hover:text-indigo-700 transition-colors">Services</a>
+          <a href="#benefits" class="text-gray-600 hover:text-indigo-700 transition-colors">Why Nexova</a>
+          <a href="#about" class="text-gray-600 hover:text-indigo-700 transition-colors">About</a>
+          <a href="#contact" class="text-gray-600 hover:text-indigo-700 transition-colors">Contact</a>
+          <a href="application.html" class="bg-indigo-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors focus:ring-2 focus:ring-indigo-400 focus:outline-none">
+            Apply Now
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button type="button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:ring-2 focus:ring-indigo-400 focus:outline-none"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"
+                onclick="toggleMobileMenu()">
+          <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="3" y1="4" x2="21" y2="4"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="20" x2="21" y2="20"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 shadow-lg" role="navigation" aria-label="Mobile navigation">
+      <div class="max-w-7xl mx-auto px-4 py-4 space-y-2">
+        <a href="index.html" class="block py-2 px-3 rounded-lg bg-indigo-50 text-indigo-700 font-semibold" aria-current="page">Home</a>
+        <a href="#services" class="block py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-100">Services</a>
+        <a href="#benefits" class="block py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-100">Why Nexova</a>
+        <a href="#about" class="block py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-100">About</a>
+        <a href="#contact" class="block py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-100">Contact</a>
+        <a href="application.html" class="block py-2 px-3 rounded-lg bg-indigo-600 text-white font-semibold text-center">Apply Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ====== HERO SECTION ====== -->
+    <section class="relative bg-gradient-to-br from-indigo-700 via-indigo-800 to-indigo-900 text-white overflow-hidden" aria-label="Hero introduction">
+      <!-- Dark overlay for text contrast -->
+      <div class="absolute inset-0" style="z-index:-1; background: linear-gradient(135deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.12) 100%);" aria-hidden="true"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36 relative">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight hero-text-shadow">
+            Your Talent Partner in a Digital World
+          </h1>
+          <p class="mt-6 text-lg sm:text-xl text-indigo-100 max-w-2xl mx-auto hero-text-shadow">
+            Nexova Solutions combines 12 years of HR expertise with cutting-edge AI to find, train, and support the people who make your business grow.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="application.html" class="bg-white text-indigo-700 px-8 py-3 rounded-lg font-bold text-lg shadow-lg hover:bg-gray-100 transition-colors focus:ring-2 focus:ring-white focus:outline-none">
+              Join Our Talent Pool
+            </a>
+            <a href="#services" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-700 transition-colors focus:ring-2 focus:ring-white focus:outline-none">
+              Explore Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SERVICES / FEATURES SECTION ====== -->
+    <section id="services" class="py-16 sm:py-20 lg:py-24" aria-labelledby="services-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 id="services-heading" class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">Our Core Services</h2>
+          <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">Three specialised lines built on a decade of experience across technology, retail, and financial services.</p>
+        </div>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+          <!-- Service 1: Headhunting -->
+          <article class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow p-8 flex flex-col">
+            <div class="flex items-center gap-3 mb-4" aria-hidden="true">
+              <span class="bg-indigo-100 text-indigo-800 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">1</span>
+              <h3 class="text-xl font-bold text-gray-800">Executive &amp;<br>Mid-Management Search</h3>
+            </div>
+            <p class="text-gray-600 mb-4">From brief to placement — our 40 selection consultants manage the full recruitment cycle: CV screening, interviews, assessment, and onboarding support.</p>
+            <ul class="text-sm text-gray-500 space-y-1 list-disc pl-5">
+              <li>AI-assisted CV scoring</li>
+              <li>Real-time candidate tracking</li>
+              <li>RAG-powered candidate matching</li>
+            </ul>
+          </article>
+
+          <!-- Service 2: Support Outsourcing -->
+          <article class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow p-8 flex flex-col">
+            <div class="flex items-center gap-3 mb-4" aria-hidden="true">
+              <span class="bg-indigo-100 text-indigo-800 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">2</span>
+              <h3 class="text-xl font-bold text-gray-800">Customer Support<br>Team Outsourcing</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Dedicated support agents for tech, retail, and finance companies. Multi-channel (phone, email, chat) with SLA adherence and real-time dashboards.</p>
+            <ul class="text-sm text-gray-500 space-y-1 list-disc pl-5">
+              <li>First-line AI chatbot resolution</li>
+              <li>Centralised knowledge base</li>
+              <li>Sentiment analysis &amp; escalation</li>
+            </ul>
+          </article>
+
+          <!-- Service 3: Corporate Training -->
+          <article class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow p-8 flex flex-col">
+            <div class="flex items-center gap-3 mb-4" aria-hidden="true">
+              <span class="bg-indigo-100 text-indigo-800 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">3</span>
+              <h3 class="text-xl font-bold text-gray-800">Corporate Training<br>&amp; Leadership</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Soft skills, leadership, communication, and team management programmes delivered by 12 expert trainers. Tailored to your company's needs.</p>
+            <ul class="text-sm text-gray-500 space-y-1 list-disc pl-5">
+              <li>Personalised learning paths</li>
+              <li>Progress tracking &amp; certification</li>
+              <li>AI-powered programme advisor</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== WHY NEXOVA / BENEFITS SECTION ====== -->
+    <section id="benefits" class="bg-indigo-100 py-16 sm:py-20 lg:py-24" aria-labelledby="benefits-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 id="benefits-heading" class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">Why Choose Nexova</h2>
+          <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">We bring together deep HR expertise and intelligent technology to deliver results that stand out.</p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div class="text-4xl mb-2 text-indigo-600" aria-hidden="true">&#x1F3AF;</div>
+            <h3 class="font-bold text-gray-800">12 Years of Expertise</h3>
+            <p class="text-sm text-gray-500 mt-2">Since 2011, we've placed thousands of professionals across three continents.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div class="text-4xl mb-2 text-indigo-600" aria-hidden="true">&#x1F916;</div>
+            <h3 class="font-bold text-gray-800">AI-Powered Process</h3>
+            <p class="text-sm text-gray-500 mt-2">CV scoring, candidate matching, and support automation driven by AI.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div class="text-4xl mb-2 text-indigo-600" aria-hidden="true">&#x1F30D;</div>
+            <h3 class="font-bold text-gray-800">Global Reach</h3>
+            <p class="text-sm text-gray-500 mt-2">Headquarters in Valencia, Spain, with an expansion office in Miami, Florida.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div class="text-4xl mb-2 text-indigo-600" aria-hidden="true">&#x1F4CA;</div>
+            <h3 class="font-bold text-gray-800">Full Talent Lifecycle</h3>
+            <p class="text-sm text-gray-500 mt-2">From headhunting to training to support — we cover every stage of talent management.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ABOUT / DEPARTMENTS OVERVIEW ====== -->
+    <section id="about" class="py-16 sm:py-20 lg:py-24" aria-labelledby="about-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:flex gap-12 items-center">
+          <div class="lg:w-1/2">
+            <h2 id="about-heading" class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">Built by People Who Build People</h2>
+            <p class="mt-4 text-gray-600 text-lg">
+              Nexova was founded in 2011 by Laura Mendoza as a two-person consultancy. Today we are 120 professionals operating from Valencia and Miami, generating $8M in revenue across three business lines.
+            </p>
+            <p class="mt-4 text-gray-600">
+              Our clients — mid-sized technology, retail, and financial services companies — choose us because we deliver the right talent, the right training, and the right support. And we do it with the intelligence that only twelve years of hands-on experience can build.
+            </p>
+            <div class="mt-6 grid grid-cols-3 gap-4 text-center">
+              <div><span class="block text-3xl font-bold text-indigo-600">120</span><span class="block text-sm text-gray-500">Employees</span></div>
+              <div><span class="block text-3xl font-bold text-indigo-600">$8M</span><span class="block text-sm text-gray-500">Revenue</span></div>
+              <div><span class="block text-3xl font-bold text-indigo-600">12+</span><span class="block text-sm text-gray-500">Years</span></div>
+            </div>
+          </div>
+          <div class="lg:w-1/2 mt-10 lg:mt-0 bg-indigo-100 rounded-2xl p-8 lg:p-12">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Leadership Team</h3>
+            <ul class="space-y-3" role="list">
+              <li class="flex gap-3 items-start"><span class="text-indigo-600 font-bold w-28 shrink-0">Laura Mendoza</span><span>CEO &amp; Founder</span></li>
+              <li class="flex gap-3 items-start"><span class="text-indigo-600 font-bold w-28 shrink-0">Sergio Molina</span><span>CTO – Technology &amp; Infrastructure</span></li>
+              <li class="flex gap-3 items-start"><span class="text-indigo-600 font-bold w-28 shrink-0">Javier Almeida</span><span>Director – Talent Selection Operations</span></li>
+              <li class="flex gap-3 items-start"><span class="text-indigo-600 font-bold w-28 shrink-0">Elena Vargas</span><span>Director – Corporate Training</span></li>
+              <li class="flex gap-3 items-start"><span class="text-indigo-600 font-bold w-28 shrink-0">Roberto Díaz</span><span>Director – Customer Support Outsourcing</span></li>
+              <li class="flex gap-3 items-start"><span class="text-indigo-600 font-bold w-28 shrink-0">Carmen Ruiz</span><span>Director – Marketing &amp; Communications</span></li>
+              <li class="flex gap-3 items-start"><span class="text-indigo-600 font-bold w-28 shrink-0">Marcos Ibáñez</span><span>Director – Sales &amp; Business Development</span></li>
+              <li class="flex gap-3 items-start"><span class="text-indigo-600 font-bold w-28 shrink-0">Patricia Solís</span><span>Director – Human Resources</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== HOW IT WORKS ====== -->
+    <section class="bg-gray-200 py-16 sm:py-20 lg:py-24" aria-labelledby="how-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 id="how-heading" class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">How It Works</h2>
+          <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">From first contact to long-term partnership — our proven four-step process.</p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div class="text-5xl text-indigo-600 font-bold mb-2" aria-hidden="true">1</div>
+            <h3 class="font-bold text-gray-800">Briefing</h3>
+            <p class="text-sm text-gray-500 mt-2">We learn your business, culture, and the specific profile you need.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div class="text-5xl text-indigo-600 font-bold mb-2" aria-hidden="true">2</div>
+            <h3 class="font-bold text-gray-800">Search &amp; Screen</h3>
+            <p class="text-sm text-gray-500 mt-2">AI-assisted CV analysis and consultant expertise identify the best candidates.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div class="text-5xl text-indigo-600 font-bold mb-2" aria-hidden="true">3</div>
+            <h3 class="font-bold text-gray-800">Interview &amp; Select</h3>
+            <p class="text-sm text-gray-500 mt-2">We coordinate interviews, assessments, and feedback until you find the right fit.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div class="text-5xl text-indigo-600 font-bold mb-2" aria-hidden="true">4</div>
+            <h3 class="font-bold text-gray-800">Place &amp; Support</h3>
+            <p class="text-sm text-gray-500 mt-2">Onboarding, training, and ongoing support to ensure long-term success.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== TRUST BAR ====== -->
+    <section class="bg-gray-200 py-12 sm:py-16" aria-label="Client trust indicators">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-sm uppercase tracking-wider text-gray-400 font-semibold">Trusted by mid-sized companies in</p>
+        <div class="flex flex-wrap justify-center gap-6 mt-6 text-gray-500 text-lg font-semibold">
+          <span class="bg-white px-5 py-2 rounded-full shadow-sm">Technology</span>
+          <span class="bg-white px-5 py-2 rounded-full shadow-sm">Retail</span>
+          <span class="bg-white px-5 py-2 rounded-full shadow-sm">Financial Services</span>
+          <span class="bg-white px-5 py-2 rounded-full shadow-sm">Manufacturing</span>
+          <span class="bg-white px-5 py-2 rounded-full shadow-sm">Healthcare</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CTA BANNER ====== -->
+    <section class="bg-indigo-600 text-white py-14 sm:py-18" aria-label="Call to action">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold">Ready to Transform Your Talent Strategy?</h2>
+        <p class="mt-4 text-lg text-indigo-200 max-w-2xl mx-auto">Join hundreds of professionals who have accelerated their careers through Nexova.</p>
+        <a href="application.html" class="mt-6 inline-block bg-white text-indigo-700 px-8 py-3 rounded-lg font-bold text-lg shadow-lg hover:bg-gray-100 transition-colors focus:ring-2 focus:ring-white focus:outline-none">
+          Submit Your Application
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer id="contact" class="bg-gray-900 text-gray-300 border-t border-gray-700" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+
+        <!-- Company Info -->
+        <div>
+          <h3 class="text-white font-bold text-lg mb-3">Nexova Solutions</h3>
+          <p class="text-sm leading-relaxed">Human resources consulting and talent acquisition since 2011.</p>
+          <p class="text-sm mt-2 text-gray-400">120 employees &middot; $8M revenue</p>
+        </div>
+
+        <!-- Contact Details -->
+        <div>
+          <h3 class="text-white font-bold text-lg mb-3">Contact</h3>
+          <address class="text-sm leading-relaxed not-italic">
+            <p><span class="text-gray-400">Headquarters:</span><br>Calle de la Innovación 42<br>46001 Valencia, Spain</p>
+            <p class="mt-2"><span class="text-gray-400">Miami Office:</span><br>1200 Brickell Avenue, Suite 300<br>Miami, FL 33131, USA</p>
+            <p class="mt-2"><a href="tel:+34960123456" class="text-indigo-300 hover:text-white transition-colors">+34 960 123 456</a></p>
+            <p><a href="mailto:contact@nexova.com" class="text-indigo-300 hover:text-white transition-colors">contact@nexova.com</a></p>
+          </address>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h3 class="text-white font-bold text-lg mb-3">Services</h3>
+          <ul class="text-sm space-y-2" role="list">
+            <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Executive Headhunting</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Mid-Management Search</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Support Team Outsourcing</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Corporate Training</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-white font-bold text-lg mb-3">Quick Links</h3>
+          <ul class="text-sm space-y-2" role="list">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+            <li><a href="application.html" class="text-gray-400 hover:text-white transition-colors">Apply Now</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-500">
+        &copy; 2026 Nexova Solutions. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile menu script -->
+  <script>
+    function toggleMobileMenu() {
+      var menu = document.getElementById('mobile-menu');
+      var btn = document.querySelector('[aria-controls="mobile-menu"]');
+      var isOpen = menu.classList.contains('block');
+      menu.classList.toggle('block', !isOpen);
+      menu.classList.toggle('hidden', isOpen);
+      btn.setAttribute('aria-expanded', !isOpen);
+    }
+  </script>
+
+</body>
+</html>
