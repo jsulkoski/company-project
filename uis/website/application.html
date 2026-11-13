@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apply – Nexova Solutions Talent Pool</title>
-  <meta name="description" content="Submit your application to join Nexova Solutions' talent pool. Executive and mid-management positions across technology, retail, and financial services.">
+  <title>Join Our Talent Pool – Nexova</title>
+  <meta name="description" content="Register your professional profile with Nexova for current and future job opportunities.">
   <link rel="canonical" href="https://nexova.com/application">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
@@ -16,20 +16,16 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Apply – Nexova Solutions Talent Pool",
-    "description": "Application form to join the Nexova Solutions talent pool for executive and mid-management positions.",
+    "name": "Nexova Talent Registration",
+    "description": "Registration form for professionals interested in current and future opportunities with Nexova.",
     "url": "https://nexova.com/application",
-    "isPartOf": {
-      "@type": "ProfessionalService",
-      "name": "Nexova Solutions"
-    }
+    "publisher": {
+      "@id": "https://nexova.com/#organization"
+    },
+    "about": { "@id": "https://nexova.com/#organization" }
   }
   </script>
 
-  <style>
-    html { scroll-behavior: smooth; }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  </style>
 </head>
 
 <body class="bg-gray-50 text-gray-900 antialiased leading-relaxed min-h-screen flex flex-col">
@@ -52,7 +48,7 @@
         <nav class="flex items-center gap-4 text-sm" aria-label="Breadcrumb navigation">
           <a href="index.html" class="text-gray-500 hover:text-indigo-700 transition-colors">Home</a>
           <span class="text-gray-400" aria-hidden="true">/</span>
-          <span class="text-indigo-700 font-semibold" aria-current="page">Apply</span>
+          <span class="text-indigo-700 font-semibold" aria-current="page">Talent</span>
         </nav>
       </div>
     </div>
@@ -63,45 +59,39 @@
 
       <!-- Page Heading -->
       <div class="mb-10 text-center">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">Join the Nexova Talent Pool</h1>
-        <p class="mt-3 text-lg text-gray-500">Submit your details and let our consultants match you with the right opportunity.</p>
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">Join Our Talent Pool</h1>
+        <p class="mt-3 text-lg text-gray-500">Register your professional profile for current and future opportunities with Nexova.</p>
       </div>
+
+      <aside class="mb-8 border-l-4 border-indigo-600 bg-indigo-50 p-5 text-gray-800" aria-label="For companies seeking talent services">
+        <p><strong>Are you a company looking for talent?</strong> Write to us at <a class="font-semibold text-indigo-700 underline" href="mailto:contacto@nexova.com">contacto@nexova.com</a></p>
+      </aside>
 
       <!-- Success Message (hidden initially) -->
       <div id="success-message" class="hidden bg-green-100 border border-green-400 text-green-800 rounded-xl p-6 mb-8 text-center" role="alert" tabindex="-1">
-        <p class="text-xl font-bold">Application Submitted Successfully</p>
-        <p class="mt-2">Thank you for your interest in Nexova Solutions. Our team will review your application and be in touch within 5 business days.</p>
+        <p class="text-xl font-bold">Thank you for your interest in Nexova!</p>
+        <p class="mt-2">We have received your information. Our selection team will review it and contact you if your profile matches any of our current or future opportunities.</p>
+        <p class="mt-2">In the meantime, follow us on <a class="font-semibold underline" href="https://linkedin.com/company/nexova">LinkedIn</a> to stay updated on our vacancies and professional development content.</p>
       </div>
 
       <!-- Application Form -->
-      <form id="application-form" action="#" method="post" enctype="multipart/form-data" novalidate class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-10" aria-label="Talent application form">
+      <form id="application-form" action="#" method="post" enctype="multipart/form-data" novalidate class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-10" aria-label="Talent profile form">
 
-        <!-- ====== Personal Information ====== -->
+        <!-- ====== Contact Information ====== -->
         <fieldset class="border-0 mb-8">
-          <legend class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2 w-full">Personal Information</legend>
+          <legend class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2 w-full">Contact Information</legend>
 
           <div class="grid gap-5 sm:grid-cols-2">
 
-            <!-- First Name -->
+                <!-- Full Name -->
             <div class="mb-1">
-              <label for="first-name" class="block text-sm font-semibold text-gray-700 mb-1">First Name <span class="text-red-500" aria-label="required">*</span></label>
-              <input type="text" id="first-name" name="first-name" required
+              <label for="full-name" class="block text-sm font-semibold text-gray-700 mb-1">Full Name <span class="text-red-500" aria-label="required">*</span></label>
+              <input type="text" id="full-name" name="full-name" required
                      class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 transition-colors"
-                     placeholder="e.g. Ana"
-                     maxlength="100"
-                     autocomplete="given-name">
-              <p id="first-name-error" class="text-red-600 text-sm mt-1 hidden" role="alert"></p>
-            </div>
-
-            <!-- Last Name -->
-            <div class="mb-1">
-              <label for="last-name" class="block text-sm font-semibold text-gray-700 mb-1">Last Name <span class="text-red-500" aria-label="required">*</span></label>
-              <input type="text" id="last-name" name="last-name" required
-                     class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 transition-colors"
-                     placeholder="e.g. Garc&iacute;a L&oacute;pez"
-                     maxlength="100"
-                     autocomplete="family-name">
-              <p id="last-name-error" class="text-red-600 text-sm mt-1 hidden" role="alert"></p>
+                   placeholder="e.g. Ana García López"
+                   maxlength="200"
+                   autocomplete="name">
+              <p id="full-name-error" class="text-red-600 text-sm mt-1 hidden" role="alert"></p>
             </div>
 
             <!-- Email -->
@@ -126,6 +116,18 @@
               <p id="phone-error" class="text-red-600 text-sm mt-1 hidden" role="alert"></p>
             </div>
 
+            <div class="mb-1">
+              <label for="country" class="block text-sm font-semibold text-gray-700 mb-1">Country <span class="text-red-500" aria-label="required">*</span></label>
+                    <select id="country" name="country-of-residence" required autocomplete="country-name"
+                      class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 transition-colors">
+                <option value="">Select your country</option>
+                <option value="spain">Spain</option>
+                <option value="united-states">United States</option>
+                <option value="other">Other</option>
+              </select>
+              <p id="country-error" class="text-red-600 text-sm mt-1 hidden" role="alert"></p>
+            </div>
+
           </div>
         </fieldset>
 
@@ -135,61 +137,49 @@
 
           <div class="grid gap-5 sm:grid-cols-2">
 
-            <!-- Current Position -->
-            <div class="mb-1">
-              <label for="current-position" class="block text-sm font-semibold text-gray-700 mb-1">Current / Most Recent Position <span class="text-red-500" aria-label="required">*</span></label>
-              <input type="text" id="current-position" name="current-position" required
-                     class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 transition-colors"
-                     placeholder="e.g. Sales Manager"
-                     maxlength="200">
-              <p id="current-position-error" class="text-red-600 text-sm mt-1 hidden" role="alert"></p>
-            </div>
-
             <!-- Years of Experience -->
             <div class="mb-1">
               <label for="years-experience" class="block text-sm font-semibold text-gray-700 mb-1">Years of Professional Experience <span class="text-red-500" aria-label="required">*</span></label>
-              <input type="number" id="years-experience" name="years-experience" required min="0" max="60" step="1"
+              <input type="number" id="years-experience" name="years-of-experience" required min="0" max="50" step="1"
                      class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 transition-colors"
                      placeholder="e.g. 8">
               <p id="years-experience-error" class="text-red-600 text-sm mt-1 hidden" role="alert"></p>
             </div>
 
-            <!-- Industry Expertise -->
             <div class="mb-1">
-              <label for="industry" class="block text-sm font-semibold text-gray-700 mb-1">Industry Expertise <span class="text-red-500" aria-label="required">*</span></label>
-              <select id="industry" name="industry" required
+              <fieldset aria-describedby="availability-error">
+                <legend class="block text-sm font-semibold text-gray-700 mb-2">Availability <span class="text-red-500" aria-label="required">*</span></legend>
+                <div class="flex flex-col gap-2">
+                  <label class="flex items-center gap-2 text-sm text-gray-700"><input type="radio" id="availability" name="availability" value="immediate" required class="accent-indigo-600"> Immediate</label>
+                  <label class="flex items-center gap-2 text-sm text-gray-700"><input type="radio" name="availability" value="one-month" required class="accent-indigo-600"> 1 month</label>
+                  <label class="flex items-center gap-2 text-sm text-gray-700"><input type="radio" name="availability" value="two-three-months" required class="accent-indigo-600"> 2-3 months</label>
+                  <label class="flex items-center gap-2 text-sm text-gray-700"><input type="radio" name="availability" value="exploring" required class="accent-indigo-600"> Just exploring</label>
+                </div>
+              </fieldset>
+              <p id="availability-error" class="text-red-600 text-sm mt-1 hidden" role="alert"></p>
+            </div>
+
+            <div class="mb-1">
+              <label for="linkedin" class="block text-sm font-semibold text-gray-700 mb-1">LinkedIn (profile URL) <span class="text-gray-400 text-xs">(optional)</span></label>
+              <input type="url" id="linkedin" name="linkedin-url" inputmode="url" autocomplete="url" maxlength="2048"
+                     class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 transition-colors"
+                     placeholder="https://www.linkedin.com/in/your-profile">
+              <p id="linkedin-error" class="text-red-600 text-sm mt-1 hidden" role="alert"></p>
+            </div>
+
+            <!-- Sector of Interest -->
+            <div class="mb-1">
+              <label for="industry" class="block text-sm font-semibold text-gray-700 mb-1">Sector of Interest <span class="text-red-500" aria-label="required">*</span></label>
+              <select id="industry" name="sector-of-interest" required
                       class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 transition-colors">
-                <option value="">&mdash; Select your industry &mdash;</option>
+                <option value="">Select your sector of interest</option>
                 <option value="technology">Technology</option>
                 <option value="retail">Retail</option>
                 <option value="financial-services">Financial Services</option>
-                <option value="manufacturing">Manufacturing</option>
-                <option value="healthcare">Healthcare</option>
+                <option value="consulting">Consulting</option>
                 <option value="other">Other</option>
               </select>
               <p id="industry-error" class="text-red-600 text-sm mt-1 hidden" role="alert"></p>
-            </div>
-
-            <!-- Position Type (radio group) -->
-            <div class="mb-1">
-              <fieldset>
-                <legend class="block text-sm font-semibold text-gray-700 mb-2">Position Type <span class="text-red-500" aria-label="required">*</span></legend>
-                <div class="flex flex-wrap gap-3">
-                  <label class="flex items-center gap-1 text-sm text-gray-600">
-                    <input type="radio" name="position-type" value="executive" required class="accent-indigo-600 focus:ring-indigo-400">
-                    Executive
-                  </label>
-                  <label class="flex items-center gap-1 text-sm text-gray-600">
-                    <input type="radio" name="position-type" value="mid-management" required class="accent-indigo-600 focus:ring-indigo-400">
-                    Mid-Management
-                  </label>
-                  <label class="flex items-center gap-1 text-sm text-gray-600">
-                    <input type="radio" name="position-type" value="both" required class="accent-indigo-600 focus:ring-indigo-400">
-                    Both
-                  </label>
-                </div>
-                <p id="position-type-error" class="text-red-600 text-sm mt-1 hidden" role="alert"></p>
-              </fieldset>
             </div>
 
           </div>
@@ -200,11 +190,10 @@
             <select id="english-level" name="english-level" required
                     class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 transition-colors">
               <option value="">&mdash; Select level &mdash;</option>
-              <option value="native">Native / Bilingual</option>
-              <option value="fluent">Fluent (C1/C2)</option>
-              <option value="advanced">Advanced (B2)</option>
-              <option value="intermediate">Intermediate (B1)</option>
-              <option value="basic">Basic (A1/A2)</option>
+              <option value="basic">Basic</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+              <option value="native">Native</option>
             </select>
             <p id="english-level-error" class="text-red-600 text-sm mt-1 hidden" role="alert"></p>
           </div>
@@ -217,38 +206,13 @@
 
           <div class="grid gap-5">
 
-            <!-- CV Upload -->
-            <div class="mb-1">
-              <label for="cv-upload" class="block text-sm font-semibold text-gray-700 mb-1">Upload Your CV <span class="text-red-500" aria-label="required">*</span></label>
-              <input type="file" id="cv-upload" name="cv-upload" required accept=".pdf,.doc,.docx,.txt"
-                     class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 transition-colors file:bg-white">
-              <p class="text-xs text-gray-400 mt-1">Accepted formats: PDF, DOC, DOCX, TXT. Max 5 MB.</p>
-              <p id="cv-upload-error" class="text-red-600 text-sm mt-1 hidden" role="alert"></p>
-            </div>
-
-            <!-- How Did You Hear About Us -->
-            <div class="mb-1">
-              <label for="referral-source" class="block text-sm font-semibold text-gray-700 mb-1">How Did You Hear About Us? <span class="text-red-500" aria-label="required">*</span></label>
-              <select id="referral-source" name="referral-source" required
-                      class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 transition-colors">
-                <option value="">&mdash; Select one &mdash;</option>
-                <option value="linkedin">LinkedIn</option>
-                <option value="referral">Referral / Colleague</option>
-                <option value="job-board">Job Board (InfoJobs, Indeed, etc.)</option>
-                <option value="company-website">Company Website</option>
-                <option value="social-media">Social Media</option>
-                <option value="recruitment-event">Recruitment Event</option>
-                <option value="other">Other</option>
-              </select>
-              <p id="referral-source-error" class="text-red-600 text-sm mt-1 hidden" role="alert"></p>
-            </div>
-
             <!-- Additional Comments -->
             <div class="mb-1">
               <label for="comments" class="block text-sm font-semibold text-gray-700 mb-1">Additional Comments <span class="text-gray-400 text-xs">(optional)</span></label>
-              <textarea id="comments" name="comments" rows="4" maxlength="1000"
+              <textarea id="comments" name="additional-comments" rows="4" maxlength="500" aria-describedby="comments-counter"
                         class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 transition-colors"
                         placeholder="Tell us anything else you'd like us to know..."></textarea>
+              <p id="comments-counter" class="text-gray-500 text-sm mt-1" aria-live="polite" aria-atomic="true">500 characters remaining.</p>
               <p id="comments-error" class="text-red-600 text-sm mt-1 hidden" role="alert"></p>
             </div>
 
@@ -260,9 +224,9 @@
 
           <!-- Terms checkbox -->
           <label class="flex items-start gap-2 text-sm text-gray-600 cursor-pointer">
-            <input type="checkbox" id="terms" name="terms" required
+            <input type="checkbox" id="terms" name="data-policy" required
                    class="w-5 h-5 accent-indigo-600 focus:ring-indigo-400">
-            <span>I confirm that the information provided is accurate and I agree to the <a href="#" class="text-indigo-600 underline hover:text-indigo-800">Privacy Policy</a> and <a href="#" class="text-indigo-600 underline hover:text-indigo-800">Terms of Service</a>. <span class="text-red-500" aria-label="required">*</span></span>
+            <span>I accept the data processing policy. <span class="text-red-500" aria-label="required">*</span></span>
           </label>
           <p id="terms-error" class="text-red-600 text-sm mt-1 hidden" role="alert"></p>
 
@@ -270,7 +234,7 @@
           <div class="flex flex-col sm:flex-row gap-4 items-center">
             <button type="submit" id="submit-btn"
                     class="w-full sm:w-auto bg-indigo-600 text-white px-8 py-3 rounded-lg font-bold text-lg shadow-md hover:bg-indigo-700 transition-colors focus:ring-2 focus:ring-indigo-400 focus:outline-none cursor-pointer">
-              Submit Application
+              Join Our Talent Pool
             </button>
             <button type="reset" id="clear-btn"
                     class="w-full sm:w-auto bg-gray-200 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors focus:ring-2 focus:ring-gray-400 focus:outline-none cursor-pointer">
@@ -293,7 +257,7 @@
   <!-- ====== FOOTER ====== -->
   <footer class="bg-gray-900 text-gray-300 border-t border-gray-700 mt-8" role="contentinfo">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-sm text-gray-500">
-      &copy; 2026 Nexova Solutions. All rights reserved. &middot; <a href="index.html" class="text-indigo-300 hover:text-white">Home</a>
+      &copy; 2025 Nexova. All rights reserved. &middot; <a href="https://linkedin.com/company/nexova" class="text-indigo-300 hover:text-white">LinkedIn</a> &middot; <a href="https://instagram.com/nexova" class="text-indigo-300 hover:text-white">Instagram</a> &middot; <a href="index.html" class="text-indigo-300 hover:text-white">Home</a>
     </div>
   </footer>
 

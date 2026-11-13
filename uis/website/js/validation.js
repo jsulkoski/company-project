@@ -6,10 +6,8 @@
  * when validation fails.
  *
  * Fields validated:
- *   first-name, last-name, email, phone, current-position,
- *   years-experience, industry, position-type (radio),
- *   english-level, cv-upload (file), referral-source,
- *   comments (optional), terms (checkbox)
+ *   full-name, email, phone, country, years-experience, industry,
+ *   english-level, availability, linkedin, comments, terms
  */
 
 (function () {
@@ -72,110 +70,75 @@
 
   var validators = {
 
-    'first-name': function (value) {
-      if (!value || value.trim().length === 0) return 'First name is required.';
-      if (value.trim().length < 2) return 'First name must be at least 2 characters.';
-      if (!/^[a-zA-ZÀ-ÿ\s\-']+$/.test(value.trim())) {
-        return 'First name can only contain letters, spaces, hyphens, and apostrophes.';
-      }
-      return '';
-    },
-
-    'last-name': function (value) {
-      if (!value || value.trim().length === 0) return 'Last name is required.';
-      if (value.trim().length < 2) return 'Last name must be at least 2 characters.';
-      if (!/^[a-zA-ZÀ-ÿ\s\-']+$/.test(value.trim())) {
-        return 'Last name can only contain letters, spaces, hyphens, and apostrophes.';
-      }
+    'full-name': function (value) {
+      if (!value || value.trim().split(/\s+/).length < 2) return 'Name must contain at least first and last name';
       return '';
     },
 
     'email': function (value) {
-      if (!value || value.trim().length === 0) return 'Email address is required.';
       var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(value.trim())) {
-        return 'Please enter a valid email address (e.g., name@domain.com).';
-      }
+      if (!value || !emailRegex.test(value.trim())) return 'Enter a valid email (example: <name@company.com>)';
       if (value.trim().length > 254) return 'Email address is too long.';
       return '';
     },
 
     'phone': function (value) {
-      if (!value || value.trim().length === 0) return 'Phone number is required.';
-      // Allow international formats: +34 612 345 678, 0034 612345678, etc.
-      var cleaned = value.replace(/[\s\-\(\)\.]/g, '');
-      if (!/^\+?\d{6,15}$/.test(cleaned)) {
-        return 'Please enter a valid phone number with country code (e.g., +34 612 345 678).';
-      }
+      if (!value || !/^\+\d{1,3}\s\d[\d\s-]{5,14}$/.test(value.trim())) return 'Phone must include country code (example: +34 612 345 678)';
       return '';
     },
 
-    'current-position': function (value) {
-      if (!value || value.trim().length === 0) return 'Current or most recent position is required.';
-      if (value.trim().length < 2) return 'Position must be at least 2 characters.';
+    'country': function (value) {
+      if (!value) return 'Select your country of residence';
       return '';
     },
 
     'years-experience': function (value) {
-      if (value === '' || value === null || value === undefined) return 'Years of experience is required.';
+      if (value === '' || value === null || value === undefined) return 'Years of experience must be between 0 and 50';
       var num = Number(value);
-      if (isNaN(num) || !Number.isInteger(num)) return 'Please enter a whole number.';
-      if (num < 0) return 'Experience cannot be negative.';
-      if (num > 60) return 'Please enter a valid number between 0 and 60.';
+      if (isNaN(num) || !Number.isInteger(num) || num < 0 || num > 50) return 'Years of experience must be between 0 and 50';
+      return '';
+    },
+
+    'availability': function () {
+      var options = form.querySelectorAll('input[name="availability"]');
+      for (var i = 0; i < options.length; i++) {
+        if (options[i].checked) return '';
+      }
+      return 'Select your availability';
+    },
+
+    'linkedin': function (value) {
+      if (!value || value.trim().length === 0) return '';
+      try {
+        var profileUrl = new URL(value.trim());
+        if (profileUrl.protocol !== 'https:' && profileUrl.protocol !== 'http:') {
+          return 'If you include LinkedIn, it must be a valid URL';
+        }
+      } catch (error) {
+        return 'If you include LinkedIn, it must be a valid URL';
+      }
       return '';
     },
 
     'industry': function (value) {
-      if (!value || value === '') return 'Please select your industry expertise.';
+      if (!value) return 'Select your sector of interest';
       return '';
-    },
-
-    'position-type': function () {
-      var radios = form.querySelectorAll('input[name="position-type"]');
-      for (var i = 0; i < radios.length; i++) {
-        if (radios[i].checked) return '';
-      }
-      return 'Please select a position type.';
     },
 
     'english-level': function (value) {
-      if (!value || value === '') return 'Please select your English proficiency level.';
-      return '';
-    },
-
-    'cv-upload': function () {
-      var input = document.getElementById('cv-upload');
-      if (!input || !input.files || input.files.length === 0) {
-        return 'Please upload your CV.';
-      }
-      var file = input.files[0];
-      var maxSize = 5 * 1024 * 1024; // 5 MB
-      var name = file.name || '';
-      var extension = name.split('.').pop().toLowerCase();
-      var allowed = ['pdf', 'doc', 'docx', 'txt'];
-      if (allowed.indexOf(extension) === -1) {
-        return 'Accepted formats: PDF, DOC, DOCX, or TXT.';
-      }
-      if (file.size > maxSize) {
-        return 'File size must be under 5 MB.';
-      }
-      return '';
-    },
-
-    'referral-source': function (value) {
-      if (!value || value === '') return 'Please tell us how you heard about us.';
+      if (!value) return 'Indicate your English level';
       return '';
     },
 
     'comments': function (value) {
       // Optional field – only validate length if provided
-      if (value && value.length > 1000) return 'Comments must be under 1000 characters.';
+      if (value && value.length > 500) return 'Comments cannot exceed 500 characters (' + (500 - value.length) + ' remaining)';
       return '';
     },
 
     'terms': function () {
       var checkbox = document.getElementById('terms');
-      return (checkbox && checkbox.checked) ? '' : 'You must agree to the Privacy Policy and Terms of Service.';
+      return (checkbox && checkbox.checked) ? '' : 'You must accept the data processing policy to continue';
     }
 
   };
@@ -195,10 +158,8 @@
 
     if (input.type === 'checkbox') {
       error = validators['terms']();
-    } else if (input.type === 'file') {
-      error = validators['cv-upload']();
-    } else if (input.name === 'position-type') {
-      error = validators['position-type']();
+    } else if (inputId === 'availability') {
+      error = validators.availability();
     } else {
       error = validators[inputId](input.value);
     }
@@ -209,12 +170,13 @@
     } else {
       clearError(inputId);
       // Mark as valid if the field has a value
-      if (input.type === 'file') {
-        if (input.files && input.files.length > 0) markValid(inputId);
-      } else if (input.type === 'checkbox') {
+      if (input.type === 'checkbox') {
         if (input.checked) markValid(inputId);
-      } else if (input.name === 'position-type') {
-        markValid(inputId);
+      } else if (inputId === 'availability') {
+        var choices = form.querySelectorAll('input[name="availability"]');
+        for (var i = 0; i < choices.length; i++) {
+          if (choices[i].checked) markValid(inputId);
+        }
       } else if (input.value && input.value.toString().trim().length > 0) {
         markValid(inputId);
       }
@@ -230,10 +192,8 @@
    */
   function validateAll() {
     var fields = [
-      'first-name', 'last-name', 'email', 'phone',
-      'current-position', 'years-experience', 'industry',
-      'position-type', 'english-level', 'cv-upload',
-      'referral-source', 'terms'
+      'full-name', 'email', 'phone', 'country', 'years-experience',
+      'industry', 'english-level', 'availability', 'linkedin', 'comments', 'terms'
     ];
 
     var allValid = true;
@@ -248,9 +208,8 @@
   /* ── Real-time validation on blur & input ──────────────────────── */
 
   var blurFields = [
-    'first-name', 'last-name', 'email', 'phone',
-    'current-position', 'years-experience', 'industry',
-    'english-level', 'referral-source'
+    'full-name', 'email', 'phone', 'country', 'years-experience',
+    'linkedin', 'industry', 'english-level', 'comments'
   ];
 
   for (var b = 0; b < blurFields.length; b++) {
@@ -285,25 +244,26 @@
     })(blurFields[b]);
   }
 
-  /* ── File input change handler ─────────────────────────────────── */
-
-  var cvUpload = document.getElementById('cv-upload');
-  if (cvUpload) {
-    cvUpload.addEventListener('change', function () {
-      validateField('cv-upload');
-    });
+  var comments = document.getElementById('comments');
+  var commentsCounter = document.getElementById('comments-counter');
+  function updateCommentsCounter() {
+    if (!comments || !commentsCounter) return;
+    var remaining = 500 - comments.value.length;
+    commentsCounter.textContent = remaining + ' character' + (remaining === 1 ? '' : 's') + ' remaining.';
+  }
+  if (comments) {
+    comments.addEventListener('input', updateCommentsCounter);
+    updateCommentsCounter();
   }
 
-  /* ── Radio button change handler ───────────────────────────────── */
+  /* ── Availability and data policy change handlers ──────────────── */
 
-  var positionRadios = form.querySelectorAll('input[name="position-type"]');
-  for (var r = 0; r < positionRadios.length; r++) {
-    positionRadios[r].addEventListener('change', function () {
-      validateField('position-type');
+  var availabilityOptions = form.querySelectorAll('input[name="availability"]');
+  for (var a = 0; a < availabilityOptions.length; a++) {
+    availabilityOptions[a].addEventListener('change', function () {
+      validateField('availability');
     });
   }
-
-  /* ── Terms checkbox change handler ─────────────────────────────── */
 
   var termsCheckbox = document.getElementById('terms');
   if (termsCheckbox) {
@@ -376,9 +336,10 @@
         // Hide success message if visible and show the form
         successMessage.classList.add('hidden');
         form.classList.remove('hidden');
+        updateCommentsCounter();
         // Focus the first name field
-        var firstName = document.getElementById('first-name');
-        if (firstName) firstName.focus();
+        var fullName = document.getElementById('full-name');
+        if (fullName) fullName.focus();
       }, 50);
     });
   }
